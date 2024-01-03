@@ -1,0 +1,19 @@
+{
+  "name": "cypress-automation-framework",
+  "version": "1.0.0",
+  "description": "Cypress Automation Framework",
+  "main": "index.js",
+  "scripts": {
+    "triggerAllTests-headless": "npx cypress run",
+    "triggerAllTests-headed": "npx cypress run --headed",
+    "triggerAllTests-chrome": "npx cypress run --browser chrome",
+    "triggerAllTests-dashborad": "npx cypress run --record --key",
+    "triggerAllTests-webdriveruni": "npx cypress run --spec cypress/e2e/webdriver-uni/*"
+  },
+  "author": "Marko Crnomarkovic",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.2",
+    "xpath": "^0.0.33"
+  }
+}
