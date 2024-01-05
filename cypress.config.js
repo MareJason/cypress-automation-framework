@@ -12,6 +12,9 @@ module.exports = defineConfig({
     chromeWebSecurity: false,
     defaultCommandTimeout: 10000,
     pageLoadTimeout: 12000,
+    screenshotOnRunFailure: true,
+    video: false,
+    videoUploadOnPasses: false,
     env:{
       first_name:"Sarah",
       webdriveruni_homepage: "http://www.webdriveruniversity.com",
