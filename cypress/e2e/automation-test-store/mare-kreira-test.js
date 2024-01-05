@@ -19,7 +19,7 @@ describe("random testing", () => {
         cy.url().should('include', '')
     })
 
-    it.skip("should verify when hover over the element it changes its color", () => {
+    it("should verify when hover over the element it changes its color", () => {
         cy.get("a[href*='product/category&path=']").contains("Apparel & accessories").trigger('mouseover').should('have.css', 'color', 'rgb(75, 91, 88)')
 
     })
@@ -27,7 +27,7 @@ describe("random testing", () => {
         const add_and_verify = new add_a_product_to_cart_and_verify_it()
         add_and_verify.add_a_product_and_verify_it()
     })
-    it.skip("calculate how many products are displayed on the page and verify it", () => {
+    it("calculate how many products are displayed on the page and verify it", () => {
         const productNumber = '.prdocutname'
         cy.get(productNumber).should('be.visible')
         cy.get(productNumber).its('length').then((productCount) => {
@@ -35,7 +35,7 @@ describe("random testing", () => {
         })
     })
 
-    it.skip("should display another picture after clickng on the arrow", () => {
+    it("should display another picture after clickng on the arrow", () => {
 
         let currentBannerText
 
@@ -47,18 +47,18 @@ describe("random testing", () => {
         cy.get('.animate0').should('not.have.text', currentBannerText);
 
     })
-    it.skip("Should show a new element after hovering over the link element", () => {
+    it("Should show a new element after hovering over the link element", () => {
         cy.get("a[href*='product/category&path=']").contains("Books").trigger('mouseover')
         cy.get('.subcategories').invoke('show').contains('Paperback').should('be.visible')
     })
 
-    it.skip("Should write all the details about the user via custom command", () => {
+    it("Should write all the details about the user via custom command", () => {
         cy.get('.collapse a').contains('Login or register').click()
         cy.pokusavam_da_skontam_customCommand()
         cy.get('.alert-error').should('have.text', '\n×\nLogin name must be alphanumeric only and between 5 and 64 characters!City must be between 3 and 128 characters!Zip/postal code must be between 3 and 10 characters!Please select a region / state!Password must be between 4 and 20 characters!')
     })
 
-    it.skip("Should write all the details about the user via custom command and fixture's file", () => {
+    it("Should write all the details about the user via custom command and fixture's file", () => {
         cy.get('.collapse a').contains('Login or register').click()
         cy.pokusavam_da_skontam_customCommand_sa_fixtures(data.firstName, data.lastName, data.email, data.telephone, data.address, 'h1', 'Create Account')
     })
